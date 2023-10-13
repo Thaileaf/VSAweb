@@ -57,27 +57,7 @@ body {
   background-color: var(--tertiary);
 }
 
-.item {
-  width: 30%;
-  display: inline-block;
-  margin-top: 2rem;
-}
 
-.caption {
-  font-size: 1.8rem;
-  text-align: center;
-  line-height: 2em;
-  color: black;
-}
-
-.polaroid {
-  background: #fff;
-  padding: 1rem;
-  box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
-  border-bottom: solid dimgray 1px;
-  border-left: solid dimgray 1px;
-
-}
 
 .headerbutton {
   color: #582E8C;

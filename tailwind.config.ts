@@ -10,6 +10,8 @@ const config: Config = {
     colors: {
       purple: '#582E8C',
       lightpurple: '#ECDDEC',
+      black: '#000000',
+      white: '#FFFFFF'
     },
     extend: {
       backgroundImage: {

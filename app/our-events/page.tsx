@@ -3,6 +3,9 @@ import Image from 'next/image'
 import Header from '@/app/components/header/header'
 import { Fade } from "react-slideshow-image";
 import {useEffect, useState} from "react";
+import { Calendar } from 'antd';
+import type { CalendarProps } from 'antd';
+import type { Dayjs } from 'dayjs';
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
@@ -48,11 +51,22 @@ export default function Home() {
     };
   }, []);
 
+
+  const onPanelChange = (value: Dayjs, mode: CalendarProps<Dayjs>['mode']) => {
+    console.log(value.format('YYYY-MM-DD'), mode);
+  };
+
+
+  const events = []
+
   return (
 
 
-    <main className="bg-lightpurple flex h-full w-full relative flex-col items-center justify-center overflow-hidden">
-
+    <main className="bg-white flex w-full relative flex-col items-center justify-center overflow-hidden">
+      { !events.length && <p className={'text-black'}>No new events</p>}
+      <div className={'w-3/4 h-128'}>
+        <Calendar onPanelChange={onPanelChange} />
+      </div>
 
 
     </main>
