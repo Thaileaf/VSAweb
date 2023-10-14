@@ -35,7 +35,29 @@ export default function Home() {
     };
   }, []);
 
-  const people = ['Leaan', 'Michael', 'Cindy']
+  const people = [{
+    name: "LeAnn Mai",
+    title: 'President',
+    majorminor: "English with a concentration in Creative Writing",
+    year: '2024',
+    food: '',
+    memory: ''
+  },{
+    name: "Jayine Nguyen",
+    title: 'Marketing Director',
+    majorminor: "Integrated Design & Media with a minor in Korean",
+    year: '2025',
+    food: '',
+    memory: ''
+  },{
+    name: "LeAnn Mai",
+    majorminor: "English with a concentration in Creative Writing",
+    year: '2024',
+    food: '',
+    memory: ''
+  }
+  ]
+
 
   return (
 
@@ -47,15 +69,19 @@ export default function Home() {
               <div key={index} className={'flex text-black'}>
                 <div className={"item"}>
                   <div className="polaroid"><img
-                      src="https://www.ohchr.org/sites/default/files/styles/hero_image_2/public/Vietnam-53572649-EPA.jpg?itok=UOMKp9Hh"/>
-                    <div className=" caption">{person}</div>
+                      src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png"/>
+                    <div className="caption"></div>
                   </div>
 
                 </div>
-                <div className={'flex justify-center items-center pl-8 pr-8 w-3/4'}>
-
-                  <p>
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                <div className={'flex flex-col justify-center items-center pl-8 pr-8 w-3/4'}>
+                  <h1 className='text-purple text-2xl'>{person.title}</h1><br/>
+                  <p className={'text-purple'}>
+                    Name: {person.name}<br/>
+                    Major/Minor: {person.majorminor}<br/>
+                    Year: {person.year}<br/>
+                    Favorite Vietnamese Food: {person.food}<br/>
+                    Favorite VSA memory: {person.memory}<br/>
                   </p>
                 </div>
               </div>
