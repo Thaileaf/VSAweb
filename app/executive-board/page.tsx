@@ -8,24 +8,9 @@ import './executive.css'
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: 0,
+    height: 0,
   });
-
-
-  function causeReflow(name: string) {
-    setInterval(() => {
-      // Reading offsetHeight will cause a reflow because it requires the browser
-      // to ensure it has the up-to-date value.
-      // By assigning it to itself, we're not changing any property but it causes a reflow.
-
-      // element.offsetHeight = element.offsetHeight;
-
-      // You could also use other properties or methods to trigger a reflow.
-      // For example:
-      // void element.offsetWidth;
-    }, 6000);
-  }
 
 
 
@@ -57,9 +42,9 @@ export default function Home() {
 
     <main className="bg-lightpurple flex w-full">
       <div className='flex flex-col exec-contain'>
-        { people.map((person) => {
+        { people.map((person, index) => {
           return(
-              <div className={'flex text-black'}>
+              <div key={index} className={'flex text-black'}>
                 <div className={"item"}>
                   <div className="polaroid"><img
                       src="https://www.ohchr.org/sites/default/files/styles/hero_image_2/public/Vietnam-53572649-EPA.jpg?itok=UOMKp9Hh"/>

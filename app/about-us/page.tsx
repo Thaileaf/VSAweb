@@ -7,24 +7,10 @@ import './about.css'
 
 export default function Home() {
   const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: 0,
+    height: 0,
   });
 
-
-  function causeReflow(name: string) {
-    setInterval(() => {
-      // Reading offsetHeight will cause a reflow because it requires the browser
-      // to ensure it has the up-to-date value.
-      // By assigning it to itself, we're not changing any property but it causes a reflow.
-
-      // element.offsetHeight = element.offsetHeight;
-
-      // You could also use other properties or methods to trigger a reflow.
-      // For example:
-      // void element.offsetWidth;
-    }, 6000);
-  }
 
 
 
