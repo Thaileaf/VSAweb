@@ -1,7 +1,4 @@
 'use client'
-import Image from 'next/image'
-import Header from '@/app/components/header/header'
-import { Fade } from "react-slideshow-image";
 import {useEffect, useState} from "react";
 // import image from '@/public/image.png'
 // import image2 from '@/public/image2.png'
